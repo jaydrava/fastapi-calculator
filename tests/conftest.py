@@ -27,7 +27,7 @@ def fastapi_server():
             "--port",
             "8000",
         ],
-        cwd=cwd,  # This will be module8_is601
+        cwd=cwd,  # Change to the directory where the FastAPI app is located
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         text=True,
