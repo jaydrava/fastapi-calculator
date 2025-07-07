@@ -26,6 +26,8 @@ def fastapi_server():
             "127.0.0.1",
             "--port",
             "8000",
+            "--app-dir",
+            cwd,
         ],
         cwd=cwd,
         stdout=subprocess.PIPE,
