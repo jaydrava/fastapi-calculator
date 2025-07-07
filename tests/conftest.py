@@ -14,7 +14,7 @@ def fastapi_server():
     """
     Fixture to start the FastAPI server before E2E tests and stop it after tests complete.
     """
-    cwd = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+    cwd = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
     fastapi_process = subprocess.Popen(
         [
@@ -26,10 +26,8 @@ def fastapi_server():
             "127.0.0.1",
             "--port",
             "8000",
-            "--app-dir",
-            cwd,
         ],
-        cwd=cwd,
+        cwd=cwd,  # This will be module8_is601
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         text=True,
