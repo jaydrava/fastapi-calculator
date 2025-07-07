@@ -78,5 +78,5 @@ jobs:
             jaydrava/fastapi-calculator:latest
             jaydrava/fastapi-calculator:${{ github.sha }}
           platforms: linux/amd64,linux/arm64
-          cache-from: type=registry,ref=kaw393939/601_module8:cache
+          cache-from: type=registry,ref=jaydrava/fastapi-calculator:cache
           cache-to: type=inline,mode=max
